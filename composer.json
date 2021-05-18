@@ -24,6 +24,7 @@
     "require-dev": {
         "roave/security-advisories": "dev-latest"
         ,
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "^0.12.88"
     }
 }

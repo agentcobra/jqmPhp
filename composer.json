@@ -13,12 +13,17 @@
     "license": "GPL-3.0",
     "keywords": ["JQuery", "JQuery Mobile", "PHP"],
     "require": {
-        "php": ">=5.3.2",
-        "beberlei/assert": "~2.0"
+        "beberlei/assert": "~2.0",
+        "php": ">=7.3"
     },
     "autoload": {
         "psr-4": {
             "jqmPhp\\": "lib/jqmPhp"
         }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+        ,
+        "squizlabs/php_codesniffer": "*"
     }
 }

@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -179,7 +182,8 @@ class Input extends Tag
         if ($this->_fieldContain) {
             $string .= '<div data-role="fieldcontain">';
         }
-        if ($this->_label->text() != '' && $this->type() != 'radio' && $this->type() != 'checkbox'
+        if (
+            $this->_label->text() != '' && $this->type() != 'radio' && $this->type() != 'checkbox'
         ) {
             $string .= $this->_label;
         }
@@ -198,7 +202,8 @@ class Input extends Tag
         if ($this->_fieldContain) {
             $string .= '</div>';
         }
-        if ($this->_label->text() != '' && ($this->type() == 'radio' || $this->type() == 'checkbox')
+        if (
+            $this->_label->text() != '' && ($this->type() == 'radio' || $this->type() == 'checkbox')
         ) {
             $string .= $this->_label;
         }

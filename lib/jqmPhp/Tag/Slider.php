@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -78,7 +81,10 @@ class Slider extends Tag
         $this->_label = new Label('', $label, $name);
         $this->_fieldContain = $fieldContain;
         $this->_off = $this->add(
-            new Tag('option', '', array(
+            new Tag(
+                'option',
+                '',
+                array(
                     new Attribute('value', $offValue),
                     new Attribute('selected', '')
                 ),
@@ -87,7 +93,10 @@ class Slider extends Tag
             true
         );
         $this->_on = $this->add(
-            new Tag('option', '', array(
+            new Tag(
+                'option',
+                '',
+                array(
                     new Attribute('value', $onValue),
                     new Attribute('selected', '')
                 ),

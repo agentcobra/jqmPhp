@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -22,7 +25,6 @@ namespace jqmPhp\Tag;
 use jqmPhp\Attribute;
 use jqmPhp\Tag;
 use jqmPhp\Text;
-
 
 /**
  * This class represents the 'textarea' tag.

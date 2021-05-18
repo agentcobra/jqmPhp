@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -61,24 +64,8 @@ class Attribute
         if ($this->value() != '' || ($this->value() == '' && $this->allowBlank())) {
             $string = $this->name() . '="' . $this->value() . '"';
         }
+
         return $string;
-    }
-
-    /**
-     * Gets and sets the attribute name property.
-     *
-     * @param string $value
-     * @return string|Attribute
-     */
-    public function name()
-    {
-        if (func_num_args() === 0) {
-            return $this->_name;
-        }
-
-        $this->_name = func_get_arg(0);
-
-        return $this;
     }
 
     /**
@@ -108,6 +95,23 @@ class Attribute
             return $this->_allowBlank;
         }
         $this->_allowBlank = func_get_arg(0);
+
+        return $this;
+    }
+
+    /**
+     * Gets and sets the attribute name property.
+     *
+     * @param string $value
+     * @return string|Attribute
+     */
+    public function name()
+    {
+        if (func_num_args() === 0) {
+            return $this->_name;
+        }
+
+        $this->_name = func_get_arg(0);
 
         return $this;
     }

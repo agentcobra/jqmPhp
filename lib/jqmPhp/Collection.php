@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -74,17 +77,51 @@ class Collection
         if (count($this->_items) > 0) {
             $string .= $this->suffix();
         }
+
         return $string;
     }
 
     /**
-     * Adds an item.
-     * @param mixed $item
-     * @return self
+     * Gets and sets the prefix property.
+     * @param string $value
+     * @return string|Collection
      */
-    public function add($item)
+    public function prefix()
     {
-        $this->_items[] = $item;
+        if (func_num_args() === 0) {
+            return $this->_prefix;
+        }
+        $this->_prefix = func_get_arg(0);
+
+        return $this;
+    }
+
+    /**
+     * Gets and sets the separator property.
+     * @param string $value
+     * @return string|Collection
+     */
+    public function separator()
+    {
+        if (func_num_args() === 0) {
+            return $this->_separator;
+        }
+        $this->_separator = func_get_arg(0);
+
+        return $this;
+    }
+
+    /**
+     * Gets and sets the suffix property.
+     * @param string $value
+     * @return string|Collection
+     */
+    public function suffix()
+    {
+        if (func_num_args() === 0) {
+            return $this->_suffix;
+        }
+        $this->_suffix = func_get_arg(0);
 
         return $this;
     }
@@ -102,6 +139,18 @@ class Collection
                 $this->add($item);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * Adds an item.
+     * @param mixed $item
+     * @return self
+     */
+    public function add($item)
+    {
+        $this->_items[] = $item;
 
         return $this;
     }
@@ -134,6 +183,7 @@ class Collection
     public function set($index, $item)
     {
         $this->_items[$index] = $item;
+
         return $this;
     }
 
@@ -151,6 +201,7 @@ class Collection
             }
         }
         $this->_items = $tmp;
+
         return $this;
     }
 
@@ -170,6 +221,7 @@ class Collection
             $tmp[] = $this->_items[$i];
         }
         $this->_items = $tmp;
+
         return $this;
     }
 
@@ -180,47 +232,5 @@ class Collection
     public function size()
     {
         return count($this->_items);
-    }
-
-    /**
-     * Gets and sets the separator property.
-     * @param string $value
-     * @return string|Collection
-     */
-    public function separator()
-    {
-        if (func_num_args() === 0) {
-            return $this->_separator;
-        }
-        $this->_separator = func_get_arg(0);
-        return $this;
-    }
-
-    /**
-     * Gets and sets the prefix property.
-     * @param string $value
-     * @return string|Collection
-     */
-    public function prefix()
-    {
-        if (func_num_args() === 0) {
-            return $this->_prefix;
-        }
-        $this->_prefix = func_get_arg(0);
-        return $this;
-    }
-
-    /**
-     * Gets and sets the suffix property.
-     * @param string $value
-     * @return string|Collection
-     */
-    public function suffix()
-    {
-        if (func_num_args() === 0) {
-            return $this->_suffix;
-        }
-        $this->_suffix = func_get_arg(0);
-        return $this;
     }
 }

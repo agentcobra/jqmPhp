@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -42,7 +45,7 @@ class Option extends Tag
     private $_value;
     private $_selected;
 
-    public function  __construct($text, $value = '', $selected = false)
+    public function __construct($text, $value = '', $selected = false)
     {
         parent::__construct('option');
         $this->_text = $this->add(new Text($text), true);

@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /*
  *  jqmPhp - HTML code generator for jQuery Mobile Framework
  *  Copyright (C) 2011  Bruno Maia
@@ -17,13 +20,13 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 namespace jqmPhp;
 
 use jqmPhp\Tag\Body;
 use jqmPhp\Tag\Head;
 use jqmPhp\Tag\Html;
 use jqmPhp\Tag\Page;
-
 
 /**
  * jqmPhp - HTML code generator for jQuery Mobile Framework
@@ -190,6 +193,7 @@ class Container
         if ($returnAdded === true) {
             return $page;
         }
+
         return $this;
     }
 

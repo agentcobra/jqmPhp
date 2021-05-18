@@ -1,4 +1,4 @@
-LICENSE
+# LICENSE
 
 jqmPhp v0.03 - HTML code generator for jQuery Mobile Framework
 Copyright (C) 2011  Bruno Maia
@@ -16,8 +16,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-HOW TO USE
-
+# HOW TO USE
+``` php
 <?php
     //Minimalist Example
     include 'lib/jqmPhp.php';
@@ -25,19 +25,15 @@ HOW TO USE
     $j->addBasicPage('', 'Hello World', 'It\'s works!');
     echo $j;
 ?>
+```
+# EXAMPLES
+ - examples/index.html
 
-EXAMPLES
+# DOCUMENTATION
+ - docs/index.html
 
-    - examples/index.html
+# PROJECT WEBSITE
+ - http://code.google.com/p/jqmphp/
 
-DOCUMENTATION
-
-    - docs/index.html
-
-PROJECT WEBSITE
-
-    - http://code.google.com/p/jqmphp/
-
-CHANGELOG
-
-    - http://code.google.com/p/jqmphp/source/list
+# CHANGELOG
+ - http://code.google.com/p/jqmphp/source/list
